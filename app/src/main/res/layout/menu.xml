@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/redColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/red" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/yellowColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/yellow" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/greenColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/green" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/blueColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/blue" />
+
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/pinkColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/pink" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/brownColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/brown" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/tintColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/teal_200" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/grayColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/gray" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/orangeColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/orange" />
+
+        <Button
+            android:id="@+id/setColor"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Set color"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
