@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
+import android.widget.RadioGroup
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -20,60 +21,112 @@ class MainActivity : AppCompatActivity() {
 
         val btn: MaterialButton = findViewById(R.id.button)
         val backGround: ConstraintLayout = findViewById(R.id.backGround)
+
         btn.setOnClickListener {
             val myDialog = layoutInflater.inflate(R.layout.menu, null)
-            val newBtn: Button = myDialog.findViewById(R.id.setColor)
-            val red = myDialog.findViewById<CheckBox>(R.id.redColor)
-            val blue = myDialog.findViewById<CheckBox>(R.id.blueColor)
-            val green = myDialog.findViewById<CheckBox>(R.id.greenColor)
-            val yellow = myDialog.findViewById<CheckBox>(R.id.yellowColor)
-            val pink = myDialog.findViewById<CheckBox>(R.id.pinkColor)
-            val brown = myDialog.findViewById<CheckBox>(R.id.brownColor)
-            val tint = myDialog.findViewById<CheckBox>(R.id.tintColor)
-            val gray = myDialog.findViewById<CheckBox>(R.id.grayColor)
-            val orange = myDialog.findViewById<CheckBox>(R.id.orangeColor)
-            var choosedColor: String = ""
-            val redColor = R.color.red
-            red.setOnCheckedChangeListener { buttonView, isChecked ->
-                if (isChecked == true){
-
-                }
-            }
-            blue.setOnCheckedChangeListener { buttonView, isChecked ->
-                choosedColor = "blue2"
-            }
-            green.setOnCheckedChangeListener { buttonView, isChecked ->
-                choosedColor = "green3"
-            }
-            yellow.setOnCheckedChangeListener { buttonView, isChecked ->
-                choosedColor = "yellow4"
-            }
-            pink.setOnCheckedChangeListener { buttonView, isChecked ->
-                choosedColor = "pink5"
-            }
-            brown.setOnCheckedChangeListener { buttonView, isChecked ->
-                choosedColor = "brown6"
-            }
-            tint.setOnCheckedChangeListener { buttonView, isChecked ->
-                choosedColor = "tint7"
-            }
-            gray.setOnCheckedChangeListener { buttonView, isChecked ->
-                choosedColor = "gray8"
-            }
-            orange.setOnCheckedChangeListener { buttonView, isChecked ->
-                choosedColor = "orange9"
-            }
-            newBtn.setOnClickListener {
-                if (choosedColor == "red"){
-                    backGround.setBackgroundColor(getColor(redColor))
-                }
-            }
-
-            AlertDialog.Builder(this).apply {
+            val button: Button = myDialog.findViewById(R.id.setColor)
+            val radioGroup = myDialog.findViewById<RadioGroup>(R.id.bigRadio)
+            val alertDIalog = AlertDialog.Builder(this).apply {
                 setView(myDialog)
+                radioGroup.setOnCheckedChangeListener { _, id ->
+                    when (id) {
+                        R.id.redColor -> {
+
+                                backGround.setBackgroundColor(
+                                    ContextCompat.getColor(
+                                        this@MainActivity,
+                                        R.color.red
+                                    )
+                                )
+
+                        }
+                        R.id.blueColor -> {
+                            button.setOnClickListener {
+                                backGround.setBackgroundColor(
+                                    ContextCompat.getColor(
+                                        this@MainActivity,
+                                        R.color.blue
+                                    )
+                                )
+                            }
+                        }
+                        R.id.yellowColor -> {
+                            button.setOnClickListener {
+                                backGround.setBackgroundColor(
+                                    ContextCompat.getColor(
+                                        this@MainActivity,
+                                        R.color.yellow
+                                    )
+                                )
+                            }
+                        }
+                        R.id.greenColor -> {
+                            button.setOnClickListener {
+                                backGround.setBackgroundColor(
+                                    ContextCompat.getColor(
+                                        this@MainActivity,
+                                        R.color.green
+                                    )
+                                )
+                            }
+                        }
+                        R.id.pinkColor -> {
+                            button.setOnClickListener {
+                                backGround.setBackgroundColor(
+                                    ContextCompat.getColor(
+                                        this@MainActivity,
+                                        R.color.pink
+                                    )
+                                )
+                            }
+                        }
+                        R.id.brownColor -> {
+                            button.setOnClickListener {
+                                backGround.setBackgroundColor(
+                                    ContextCompat.getColor(
+                                        this@MainActivity,
+                                        R.color.brown
+                                    )
+                                )
+                            }
+                        }
+                        R.id.tintColor -> {
+                            button.setOnClickListener {
+                                backGround.setBackgroundColor(
+                                    ContextCompat.getColor(
+                                        this@MainActivity,
+                                        R.color.teal_200
+                                    )
+                                )
+                            }
+                        }
+                        R.id.grayColor -> {
+                            button.setOnClickListener {
+                                backGround.setBackgroundColor(
+                                    ContextCompat.getColor(
+                                        this@MainActivity,
+                                        R.color.lime
+                                    )
+                                )
+                            }
+                        }
+                        R.id.orangeColor -> {
+                            button.setOnClickListener {
+                                backGround.setBackgroundColor(
+                                    ContextCompat.getColor(
+                                        this@MainActivity,
+                                        R.color.orange
+                                    )
+                                )
+                            }
+                        }
+
+                    }
+                }
             }.create().show()
         }
 
-
     }
+
+
 }
